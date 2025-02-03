@@ -15,27 +15,81 @@
             overflow-x: hidden;
         }
 
-        h1 {
-            font-size: 3rem;
-            margin-top: 50px;
+        /* Navigation Bar */
+        nav {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #007BFF;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
             animation: fadeIn 2s ease-in-out;
         }
 
-        p {
+        .hero h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        .hero p {
             font-size: 1.2rem;
+            margin-top: 10px;
+            max-width: 600px;
             animation: fadeIn 3s ease-in-out;
         }
 
+        /* Projects Section */
         .projects {
-            margin-top: 30px;
+            padding: 50px 20px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .projects h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .project-grid {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
-            padding: 20px;
         }
 
-        .project {
+        .project-card {
             background: rgba(255, 255, 255, 0.1);
             border-radius: 10px;
             padding: 20px;
@@ -45,29 +99,31 @@
             animation: slideUp 1s ease-in-out;
         }
 
-        .project:hover {
+        .project-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
 
-        .project h2 {
+        .project-card h3 {
             font-size: 1.5rem;
             margin-bottom: 10px;
         }
 
-        .project p {
+        .project-card p {
             font-size: 1rem;
             color: #ddd;
         }
 
         /* Footer */
         footer {
-            position: fixed;
-            bottom: 10px;
-            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 10px;
+            text-align: center;
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.7);
-            animation: fadeIn 4s ease-in-out;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
 
         /* Animations */
@@ -93,26 +149,44 @@
     </style>
 </head>
 <body>
-    <h1>Abdurrahman Asim's Portfolio</h1>
-    <p>Welcome to my project showcase! This website was created entirely by AI.</p>
+    <!-- Navigation Bar -->
+    <nav>
+        <h1>Abdurrahman Asim</h1>
+        <div>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
 
-    <div class="projects">
-        <div class="project">
-            <h2>Project 1</h2>
-            <p>Description of Project 1.</p>
-        </div>
-        <div class="project">
-            <h2>Project 2</h2>
-            <p>Description of Project 2.</p>
-        </div>
-        <div class="project">
-            <h2>Project 3</h2>
-            <p>Description of Project 3.</p>
-        </div>
-    </div>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to My Portfolio</h1>
+        <p>This website showcases my projects and skills. It was created entirely by AI and serves as a platform to highlight my work in a clean and modern design.</p>
+    </section>
 
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>Description of Project 1. This project demonstrates my skills in [specific technology or field].</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Description of Project 2. This project showcases my ability to [specific skill or achievement].</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 3</h3>
+                <p>Description of Project 3. This project highlights my expertise in [specific area].</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        &copy; 2025 Abdurrahman Asim
+        &copy; 2025 Abdurrahman Asim | Created entirely by AI
     </footer>
 </body>
 </html>
